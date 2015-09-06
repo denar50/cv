@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="esCv" ng-controller="MainCtrl as mainCtrl">
+<head>
+  <link rel="stylesheet" type="text/css" href="node_modules/foundation-sites/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/foundation-sites/css/foundation.css">
+</head>
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home">
+      <es-pic-slider urls="mainCtrl.sliderUrls"></es-pic-slider>
+      <div>
+        <h1>I'm Edgar Santos</h1>
+        <h3>A professional frontend & backend developer</h3>
+      </div>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/foundation-sites/js/foundation.js"></script>
+  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="dist/cv.app.js"></script>
+</body>
+<!-- http://themeelite.com/demos/flato/template-2/ -->
+</html>
