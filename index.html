@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="esCv" ng-controller="MainCtrl as mainCtrl">
 <head>
-  <link rel="stylesheet" type="text/css" href="node_modules/foundation-sites/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="node_modules/foundation-sites/css/foundation.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
@@ -12,12 +12,21 @@
   </header>
 
   <main id="main">
-    <section id="home">
-      <es-pic-slider urls="mainCtrl.sliderUrls"></es-pic-slider>
-      <div>
-        <h1>I'm Edgar Santos</h1>
-        <h3>A professional frontend & backend developer</h3>
+    <section id="home" class="row">
+
+      <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls"></es-pic-slider>
+
+      <div id="banner-wrapper" class="columns small-12">
+
+        <div class="row">
+          <div class="banner-box columns small-12 medium-10 medium-centered large-8 large-centered center-vertically">
+            <h1>I'm Edgar Santos</h1>
+            <h3>A professional frontend & backend developer</h3>
+          </div>
+        </div>
+
       </div>
+
     </section>
   </main>
 

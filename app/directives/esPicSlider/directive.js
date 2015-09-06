@@ -8,7 +8,7 @@ function esPicSlider($interval){
       urls: "="
     },
     link: function(scope, element, attrs, controller){
-      var liTemplate = "<li class='es-picture'><img src='#src#'/></li>";
+      var liTemplate = '<li class="es-picture"><div class="pic">&nbsp;</div></li>';
       var wrapper = element.find('.es-pic-slider-wrapper');
       var width = scope.width || $(window).width();
       var height = scope.height || $(window).height();
@@ -17,7 +17,9 @@ function esPicSlider($interval){
       var ulEl = $(wrapper).find('ul');
       var liEls = [];
       scope.urls.forEach(function(value, index){
-        liEls.push($(liTemplate.replace('#src#', value)));
+        var li = $(liTemplate);
+        li.find('div.pic').css('backgroundImage', 'url(\''+value+'\')');
+        liEls.push(li);
       });
       var picChangeTimeout;
 
