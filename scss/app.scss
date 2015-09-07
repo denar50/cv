@@ -34,6 +34,7 @@ a {
 	}
 	.es-picture {
 		position: absolute;
+		padding:0;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -51,10 +52,17 @@ a {
 
 //===========================================
 
+.full-width {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
 /*HOME*/
 #home
 {
-
+	position: relative;
 	#pic-slider
 	{
 		z-index: 1;

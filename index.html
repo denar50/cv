@@ -7,14 +7,23 @@
 </head>
 <body>
   <header>
-    <nav>
-    </nav>
+    <!-- <nav>
+      <ul class="nav navbar-nav">
+        <li class="menuItem active"><a href="#home">Home</a></li>
+        <li class="menuItem"><a href="#aboutme">About</a></li>
+        <li class="menuItem"><a href="#technical">Skills</a></li>
+        <li class="menuItem"><a href="#exprience">Experience</a></li>
+        <li class="menuItem"><a href="#education">Education</a></li>
+        <li class="menuItem"><a href="#protfolio">Portfolio</a></li>
+        <li class="menuItem"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav> -->
   </header>
 
   <main id="main">
-    <section id="home" class="row">
+    <section id="home" class="row full-width">
 
-      <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls"></es-pic-slider>
+      <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
       <div id="banner-wrapper" class="columns small-12">
 
@@ -26,6 +35,11 @@
         </div>
 
       </div>
+
+    </section>
+
+    <section id="aboutme" class="row" >
+      
 
     </section>
   </main>

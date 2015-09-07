@@ -8,7 +8,7 @@ function esPicSlider($interval){
       urls: "="
     },
     link: function(scope, element, attrs, controller){
-      var liTemplate = '<li class="es-picture"><div class="pic">&nbsp;</div></li>';
+      var liTemplate = '<li class="es-picture columns large-12"><div class="pic">&nbsp;</div></li>';
       var wrapper = element.find('.es-pic-slider-wrapper');
       var width = scope.width || $(window).width();
       var height = scope.height || $(window).height();
