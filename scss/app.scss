@@ -59,10 +59,44 @@ a {
    max-width: initial;
 }
 
+/*NAV BAR*/
+header {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100%
+}
+#main {
+	position: relative;
+	z-index: 1;
+}
+#nav-bar-wrapper {
+	position: relative;
+	z-index: 2;
+	height: 62px;
+
+	&.stuck-on-top{
+		width: 100%;
+	}
+}
+
+//===================================================
+
+.cv-item{
+	width: 100%;
+	height: 100%;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+}
 /*HOME*/
 #home
 {
 	position: relative;
+	z-index: 1;
+	height: calc(100% - 62px);
 	#pic-slider
 	{
 		z-index: 1;

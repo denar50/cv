@@ -10,10 +10,10 @@ function esPicSlider($interval){
     link: function(scope, element, attrs, controller){
       var liTemplate = '<li class="es-picture columns large-12"><div class="pic">&nbsp;</div></li>';
       var wrapper = element.find('.es-pic-slider-wrapper');
-      var width = scope.width || $(window).width();
+      /*var width = scope.width || $(window).width();
       var height = scope.height || $(window).height();
       $(wrapper).css('width', width + 'px');
-      $(wrapper).css('height', height + 'px');
+      $(wrapper).css('height', height + 'px');*/
       var ulEl = $(wrapper).find('ul');
       var liEls = [];
       scope.urls.forEach(function(value, index){

@@ -7,7 +7,25 @@
 </head>
 <body>
   <header>
-    <div id="nav-bar-wrapper">
+
+    <section id="home" class="cv-item row full-width">
+
+      <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
+
+      <div id="banner-wrapper" class="columns small-12">
+
+        <div class="row">
+          <div class="banner-box columns small-12 medium-centered large-centered center-vertically">
+            <h1>I'm John Doe</h1>
+            <h3>A professional frontend & backend developer</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div id="nav-bar-wrapper" es-sticky-nav>
       <nav id="nav-bar" class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
@@ -34,7 +52,7 @@
 
   <main id="main">
     
-    <section id="home" class="row full-width">
+    <section id="technical" class="cv-item row full-width">
 
       <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
@@ -51,7 +69,7 @@
 
     </section>
 
-    <section id="technical" class="row full-width">
+    <section id="exprience" class="cv-item row full-width">
 
       <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
@@ -68,7 +86,7 @@
 
     </section>
 
-    <section id="exprience" class="row full-width">
+    <section id="education" class="cv-item row full-width">
 
       <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
@@ -85,7 +103,7 @@
 
     </section>
 
-    <section id="education" class="row full-width">
+    <section id="protfolio" class="cv-item row full-width">
 
       <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
@@ -102,24 +120,7 @@
 
     </section>
 
-    <section id="protfolio" class="row full-width">
-
-      <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
-
-      <div id="banner-wrapper" class="columns small-12">
-
-        <div class="row">
-          <div class="banner-box columns small-12 medium-centered large-centered center-vertically">
-            <h1>I'm John Doe</h1>
-            <h3>A professional frontend & backend developer</h3>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="contact" class="row full-width">
+    <section id="contact" class="cv-item row full-width">
 
       <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
@@ -140,7 +141,6 @@
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/foundation-sites/js/foundation.js"></script>
   <script type="text/javascript" src="node_modules/angular/angular.js"></script>
-  <script type="text/javascript" src="vendor/stickUp/stickUp.js"></script>
   <script type="text/javascript" src="dist/cv.app.js"></script>
 </body>
 <!-- http://themeelite.com/demos/flato/template-2/ -->
