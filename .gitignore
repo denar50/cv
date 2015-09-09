@@ -1,5 +1,7 @@
-node_modules/
-!node_modules/foundation-sites/
+/node_modules/*
+!/node_modules/foundation-sites
+/node_modules/foundation-sites/*
+!/node_modules/foundation-sites/scss
 dist
 css
 *.log
