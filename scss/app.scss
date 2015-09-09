@@ -77,6 +77,17 @@ header {
 	&.stuck-on-top{
 		width: 100%;
 	}
+
+	@media screen and (min-width: $small-breakpoint){
+		.top-bar-section {
+			text-align: center;
+			ul{
+				&.center{
+					display: inline-block;
+				}
+			}
+		}
+	}
 }
 
 //===================================================
