@@ -10,7 +10,8 @@ function esStickyNav(){
 		link: function(scope, element, attrs, controller){
 			var classes = {
 				navElementClass: scope.navElementClass,
-				stickClass: scope.stickClass || 'stuck-on-top'
+				stickClass: scope.stickClass || 'stuck-on-top',
+				navElementActiveClass: scope.navElementActiveClass || 'active'
 			};
 
 			var initialElementTop;
@@ -55,16 +56,15 @@ function esStickyNav(){
 						currentElement.navElement = value;
 						currentElement.top = distanceFromTop;
 					}
-					
+
 				});
 				return currentElement;
 			}
 
 			function updateNavBar(){
-				if(currentNavElement){
-					$(currentNavElement).removeClass(classes.navElementActiveClass);
-				}
-				currentNavElement = getCurrentElementContent();
+				var activeSelector = '.' + classes.navElementClass + '.' + classes.navElementActiveClass;
+				$(activeSelector).removeClass(classes.navElementActiveClass);
+				currentNavElement = getCurrentElementContent().navElement;
 				$(currentNavElement).addClass(classes.navElementActiveClass);
 			}
 
@@ -88,12 +88,12 @@ function esStickyNav(){
 					}
 					else
 					{
-							unstick();	
+							unstick();
 					}
 					updateNavBar();
 				});
 			}
-			
+
 		}
 	}
 }
