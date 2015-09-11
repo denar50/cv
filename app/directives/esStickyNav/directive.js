@@ -42,8 +42,14 @@ function esStickyNav(){
 				updateNavBar();
 				setElInitialTopPosition();
 				addOnScrollEvent();
+				addOnResizeWindowEvent();
 			}
 
+			function addOnResizeWindowEvent(){
+				$(window).resize(function(){
+					setElInitialTopPosition();
+				});
+			}
 
 			function getCurrentElementContent(){
 				var currentElement = {};
