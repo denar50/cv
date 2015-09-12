@@ -8,7 +8,7 @@
 <body>
   <header>
 
-    <section id="home" class="cv-item row full-width">
+    <section id="home" class="row full-width">
 
       <es-pic-slider id="pic-slider" urls="mainCtrl.sliderUrls" class="columns large-12 collapse"></es-pic-slider>
 
@@ -78,8 +78,20 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
 
     <section id="technical" class="cv-item row full-width">
 
-      <div style="height: 450px; width: 100%; background-color: white">
-        <h1>SKILLS</h1>
+      <div class="heading column small-12 small-centered">
+        <h2>TECHNICAL SKILLS</h2>
+        <span>I can say i’m quite good at</span>
+      </div>
+      <div class="column small-12">
+        <div class="row">
+          <es-easy-pie-chart percent="90"></es-easy-pie-chart>
+          <es-easy-pie-chart percent="50"></es-easy-pie-chart>
+          <es-easy-pie-chart percent="60"></es-easy-pie-chart>
+          <es-easy-pie-chart percent="40"></es-easy-pie-chart>
+          <es-easy-pie-chart percent="80"></es-easy-pie-chart>
+          <es-easy-pie-chart percent="60"></es-easy-pie-chart>
+
+        </div>
       </div>
 
     </section>
@@ -120,6 +132,8 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/foundation-sites/js/foundation.js"></script>
   <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js"></script>
+  <script type="text/javascript" src="bower_components/jquery.easing/js/jquery.easing.js"></script>
   <script type="text/javascript" src="dist/cv.app.js"></script>
 </body>
 <!-- http://themeelite.com/demos/flato/template-2/ -->

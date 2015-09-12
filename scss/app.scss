@@ -4,6 +4,9 @@
 -------------------------------------------------------------------------------*/
 $teal: #00BDBD;
 $darkGray: #474d5d;
+$lightGray2: #eee;
+$lightRed: #FF675F;
+$lightGray3: #8e8e8e;
 
 * {
 	padding:0;
@@ -112,6 +115,41 @@ header {
 .cv-item{
 	width: 100%;
 	height: auto;
+	padding: 85px 30px 30px 30px;
+
+	.heading {
+		text-align: center;
+		padding-bottom: 45px;
+		span{
+			font-weight: 400;
+			font-size: 0.875rem;
+		}
+	}
+
+	h2, h3, h4, h5 {
+		color: inherit;
+		text-align: inherit;
+	}
+	h2 {
+		font-size: 2.25rem;
+		font-weight: 300;
+		line-height: 2.25rem;
+		margin-bottom: 0;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.125rem;
+		margin-bottom: 25px;
+	}
+
+	h5 {
+		font-size: 0.875rem;
+	}
+
 }
 
 main{
@@ -124,7 +162,8 @@ main{
 	position: relative;
 	z-index: 1;
 	height: calc(100% - 62px);
-
+	width: 100%;
+	height: auto;
 
 	#pic-slider
 	{
@@ -224,15 +263,7 @@ main{
 #about {
 	background-color: $teal;
 	color: white;
-	padding: 85px 30px 30px 30px;
-	.heading {
-		text-align: center;
-		padding-bottom: 45px;
-		span{
-			font-weight: 400;
-			font-size: 0.875rem;
-		}
-	}
+
 	.content{
 		p{
 			font-size: 0.875rem;
@@ -255,27 +286,49 @@ main{
 			}
 		}
 	}
-	h2, h3, h4, h5 {
-		color: inherit;
-		text-align: inherit;
-	}
-	h2 {
-		font-size: 2.25rem;
-		font-weight: 300;
-		line-height: 2.25rem;
-		margin-bottom: 0;
+
+}
+
+#technical {
+	background-color: $lightGray2;
+	color: $darkGray;
+
+	.heading {
+		h2 {
+			color: $lightRed;
+		}
 	}
 
-	h3 {
-		font-size: 1.5rem;
+	.chart {
+		text-align: center;
+		margin-bottom: 50px;
+		.piechart {
+			width: 152px;
+			margin: 0 auto;
+			position: relative;
+			.percentage{
+				position: absolute;
+				top: 64px;
+				left: 64px;
+			}
+		}
+
+		canvas{
+			display: inline-block;
+			margin-bottom: 26px;
+		}
+
+		.chart-info {
+			h4 {
+				font-weight: 600;
+				margin-bottom: 6px;
+			}
+			p {
+				line-height: 1.1rem;
+				font-size: 0.9rem;
+				color: $lightGray3;
+			}
+		}
 	}
 
-	h4 {
-		font-size: 1.125rem;
-		margin-bottom: 25px;
-	}
-
-	h5 {
-		font-size: 0.875rem;
-	}
 }
