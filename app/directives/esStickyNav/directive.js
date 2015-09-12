@@ -30,12 +30,17 @@ function esStickyNav(){
 						position: 'fixed',
 						top: 0
 					});
+
+					element.parent().css({
+						paddingBottom: element.height() + 'px'
+					});
 				}
 			}
 
 			function unstick(){
 				element.removeClass(classes.stickClass);
 				element.attr('style', '');
+				element.parent().attr('style', '');
 			}
 
 			function init(){
