@@ -6,19 +6,23 @@ function MainCtrl(){
 
   function initDom(){
     $(document).foundation();
-
-    $('.menu-item a[href^="#"]').each(function(){
-      var hash = this.hash;
-      var target = $(hash);
-      var scrollToPosition = target.offset().top - 62;
-      $(this).on('click', function(e){
-        $('html, body').stop().animate({
-            'scrollTop': scrollToPosition
-        }, 900, 'swing', function () {
-            location.hash = hash;
+    initNavLinks();
+    $(window).resize(initNavLinks);
+    function initNavLinks(){
+      $('.menu-item a[href^="#"]').each(function(){
+        var hash = this.hash;
+        var target = $(hash);
+        var scrollToPosition = target.offset().top - 62;
+        $(this).off('click');
+        $(this).on('click', function(e){
+          $('html, body').stop().animate({
+              'scrollTop': scrollToPosition
+          }, 900, 'swing', function () {
+              location.hash = hash;
+          });
+          return false;
         });
-        return false;
       });
-    });
+    }
   }
 }

@@ -20,6 +20,8 @@ function esStickyNav(){
 
 			var currentNavElement;
 
+			var elementHeight = element.height();
+
 			init();
 
 			function stickToTop(){
@@ -32,7 +34,7 @@ function esStickyNav(){
 					});
 
 					element.parent().css({
-						paddingBottom: element.height() + 'px'
+						paddingBottom: elementHeight + 'px'
 					});
 				}
 			}
