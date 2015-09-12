@@ -10,7 +10,10 @@ function MainCtrl(){
 
         var target = this.hash;
         var $target = $(target);
-
+        if(!$target.offset())
+        {
+          return;
+        }
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top - 62
         }, 900, 'swing', function () {
@@ -18,5 +21,5 @@ function MainCtrl(){
         });
     });
   })
-  
+
 }
