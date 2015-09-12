@@ -3,6 +3,7 @@
  1. CSS Reset
 -------------------------------------------------------------------------------*/
 $teal: #00BDBD;
+$darkGray: #474d5d;
 
 * {
 	padding:0;
@@ -235,6 +236,23 @@ main{
 	.content{
 		p{
 			font-size: 0.875rem;
+		}
+
+		.bntDownload {
+	    font-size: 1rem;
+	    font-weight: 700;
+	    background: $darkGray;
+	    padding: 16px 22px;
+	    display: inline-block;
+		}
+
+		.pic-container{
+			text-align: center;
+			img {
+				width: 300px;
+				border-radius: 50%;
+				display: inline-block;
+			}
 		}
 	}
 	h2, h3, h4, h5 {

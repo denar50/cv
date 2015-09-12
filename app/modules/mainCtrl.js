@@ -15,7 +15,7 @@ function MainCtrl(){
         $('html, body').stop().animate({
             'scrollTop': scrollToPosition
         }, 900, 'swing', function () {
-            //location.hash = hash;
+            location.hash = hash;
         });
         return false;
       });
