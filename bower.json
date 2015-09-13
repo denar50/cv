@@ -1,0 +1,7 @@
+{
+  "name": "esCv",
+  "dependencies": {
+    "jquery.easy-pie-chart": "^2.1.6",
+    "jquery.easing": "^1.3.x"
+  }
+}

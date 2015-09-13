@@ -38,9 +38,18 @@
 
 					var pieChart = new EasyPieChart(element[0], options);
 
-					scope.$watch('percent', function(newVal, oldVal) {
+					var cancelPercentWatcher = scope.$watch('percent', function(newVal, oldVal) {
 						pieChart.update(newVal);
 					});
+
+					scope.$on('resetEasyPieChartAnimation', function(){
+						pieChart.update(0);
+						pieChart.update(scope.percent);
+					});
+
+					scope.$on('destroy', function()){
+						cancelPercentWatcher();
+					}
 				}
 			};
 		}]);
