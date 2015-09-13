@@ -9,18 +9,15 @@ function MainCtrl($timeout){
   function initDom(){
     $(document).foundation();
     initNavLinks();
-    $(window).resize(initNavLinks);
     function initNavLinks(){
       $('.menu-item a[href^="#"]').each(function(){
         var hash = this.hash;
         var target = $(hash);
-        var scrollToPosition = target.offset().top - 60;
-        $(this).off('click');
         $(this).on('click', function(e){
           $('html, body').stop().animate({
-              'scrollTop': scrollToPosition
+              'scrollTop': target.offset().top - 60
           }, 900, 'swing', function () {
-              location.hash = hash;
+              //location.hash = hash;
           });
           return false;
         });

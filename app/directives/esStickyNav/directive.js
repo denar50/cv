@@ -82,7 +82,12 @@ function esStickyNav(){
 			}
 
 			function setElInitialTopPosition(){
-				initialElementTop = $(element).offset().top;
+				if($(element).css('position') === 'fixed'){
+					initialElementTop = $(element).parent().height() - elementHeight;
+				}
+				else {
+						initialElementTop = $(element).parent().height();
+				}
 			}
 
 			function getDistanceFromTop(el){
@@ -96,7 +101,7 @@ function esStickyNav(){
 				$(document).on('scroll', function(){
 					var distanceFromTop = getDistanceFromTop(element);
 					var scrollTop = $(window).scrollTop();
-					if(distanceFromTop <= 0 && scrollTop >= initialElementTop){
+					if(distanceFromTop <= 0 && scrollTop >= (initialElementTop-elementHeight)){
 						stickToTop();
 					}
 					else
