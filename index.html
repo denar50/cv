@@ -78,11 +78,11 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
 
     <section id="technical" class="cv-item row full-width">
 
-      <div class="heading column small-12 small-centered">
+      <div class="max-width heading column small-12 small-centered">
         <h2>TECHNICAL SKILLS</h2>
         <span>I can say i’m quite good at</span>
       </div>
-      <div class="column small-12">
+      <div class="max-width column small-12 large-12 large-centered">
         <div class="row">
           <es-easy-pie-chart ng-repeat="item in mainCtrl.technical" percent="item.percentage" title="item.title" description="item.description">
           </es-easy-pie-chart>
@@ -93,13 +93,13 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
 
     <section id="experience" class="cv-item row full-width">
 
-      <div class="heading column small-12 small-centered">
+      <div class="max-width heading column small-12 small-centered">
         <h2>WORK EXPERIENCE</h2>
         <span>My previous associations</span>
       </div>
-      <div class="contents column small-12 large-10 large-centered">
+      <div class="max-width contents column small-12 large-10 large-centered">
         <div class="row" ng-repeat="item in mainCtrl.experience">
-          <div class="column small-12 small-centered medium-12 large-12">
+          <div class="card-wrapper column small-12 small-centered medium-12 large-12">
             <es-experience-card start-date="item.start" end-date="item.end" title="item.title" subtitle="item.subtitle" description="item.description"></ex-experience-card>
           </div>
         </div>
