@@ -9,6 +9,7 @@ $lightGray2: #eee;
 $lightRed: #FF675F;
 $lightGray3: #8e8e8e;
 $lightGray4: #f3f3f3;
+$darkPurple2: #474d5d;
 
 * {
 	padding:0;
@@ -348,6 +349,11 @@ main{
 		h2 {
 			color: $lightRed;
 		}
+
+		span
+		{
+			color: $lightGray3;
+		}
 	}
 
 	.experience-card 
@@ -472,5 +478,196 @@ main{
 		}
 	}
 
-}
+} //End of experience
+
+#education {
+	background-color: $lightGray4;
+	color: $darkGray;
+
+	.heading {
+		h2 {
+			color: $lightRed;
+		}
+		span
+		{
+			color: $lightGray3;
+		}
+	}
+
+	.experience-card 
+	{
+		.card-heading
+		{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 40px;
+			.buble
+			{
+				background-color: $lightRed;
+				color: white;
+				padding: 50px 0 50px 0;
+				text-align: center;
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				display: inline-block;
+
+				p
+				{
+					margin: 0;				
+				}
+			}
+			
+		}
+			
+		.description-container
+		{
+			width: 100%;
+			.description
+			{
+				background-color: white;
+				border-bottom: solid 4px $lightGray2;
+	    		padding: 22px 47px 6px 47px;
+
+				h4
+				{
+					font-size: 1rem;
+					margin-bottom: 0;
+					&.title
+					{
+						font-size: 1.1875rem;
+						font-weight: 600;
+					}
+					&:last-of-type
+					{
+						margin-bottom: 6px;
+					}
+				}
+				
+				p
+				{
+					line-height: 1.1rem;
+					font-size: 0.9rem;
+					color: $lightGray3;
+				}
+
+				position: relative;
+				&::before{
+					@include triangle( 
+						$direction : top, 
+						$position  : top -1rem, 
+						$color     : white,
+						$size: 1rem
+					);
+
+					left: calc(50% - 1rem);
+				}
+			}
+		}
+
+		margin-bottom: 50px;
+	}
+
+	@media screen and (min-width: $small-breakpoint)
+	{
+		.experience-card
+		{	
+			.card-heading,
+			.description-container
+			{
+				vertical-align: top;
+				display: inline-block;
+			}
+			.card-heading
+			{
+				
+				max-width: 140px;
+				width: 140px;
+				text-align: left;
+				.buble
+				{
+					width: 140px;
+					height: 140px;
+					padding-top: 60px;
+				}
+			}
+			.description-container
+			{
+				width: calc(100% - 186px);
+				box-sizing: border-box;
+				padding-left: 30px;
+				margin-left: 30px;
+				border-left: 1px solid $lightGray4;
+				.description
+				{
+					padding-left: 50px;
+					&::before
+					{
+						@include triangle( 
+							$direction : left, 
+							$position  : top 1rem left -2rem, 
+							$color     : white,
+							$size: 1rem
+						);
+						
+					}
+				}
+			}
+		}
+	}
+
+} //End of Education
+
+
+#contact {
+	$map-height: 400px;
+	background-color: $lightGray4;
+	color: $darkGray;
+
+	.heading {
+		h2 {
+			color: $lightRed;
+		}
+		span
+		{
+			color: $lightGray3;
+		}
+	}
+
+	.map-container
+	{
+		background: url(../assets/img/map-bro.png) repeat-x 0 0;
+		padding-top: 4px;
+		height: $map-height;
+		position: absolute;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		width: 100%;
+		margin: 0;
+	}
+
+	.contents
+	{
+		background-color: $darkPurple2;
+		height: 100px;
+		margin-top: $map-height;
+		
+		.contact-details
+		{
+			
+		}
+	}
+
+	#map-canvas
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	
+
+} //End of Contact
+
+
 

@@ -43,7 +43,7 @@
             <li class="menu-item"><a href="#technical">Skills</a></li>
             <li class="menu-item"><a href="#experience">Experience</a></li>
             <li class="menu-item"><a href="#education">Education</a></li>
-            <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+            <!-- <li class="menu-item"><a href="#portfolio">Portfolio</a></li> -->
             <li class="menu-item"><a href="#contact">Contact</a></li>
           </ul>
         </section>
@@ -109,12 +109,20 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
 
     <section id="education" class="cv-item row full-width">
 
-      <div style="height: 880px; width: 100%; background-color: white">
-        <h1>EDUCATION</h1>
+      <div class="max-width heading column small-12 small-centered">
+        <h2>EDUCATION & DIPLOMAS</h2>
+        <span>What I have done in my academic career</span>
+      </div>
+      <div class="max-width contents column small-12 large-10 large-centered">
+        <div class="row" ng-repeat="item in mainCtrl.experience">
+          <div class="card-wrapper column small-12 small-centered medium-12 large-12">
+            <es-experience-card start-date="item.start" title="item.title" subtitle="item.subtitle" description="item.description"></ex-experience-card>
+          </div>
+        </div>
       </div>
 
     </section>
-
+    <!--
     <section id="portfolio" class="cv-item row full-width">
 
       <div style="height: 1000px; width: 100%; background-color: white">
@@ -122,21 +130,39 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
       </div>
 
     </section>
+  -->
 
-    <section id="contact" class="cv-item row full-width">
-
-      <div style="height: 1000px; width: 100%; background-color: white">
-        <h1>CONTACT</h1>
+    <section id="contact" class="">
+      <div class="row cv-item full-width">
+        <div class="max-width heading column small-12 small-centered">
+          <h2>GET IN TOUCH</h2>
+          <span>Please feel free if you would like to have a chat.</span>
+        </div>
       </div>
+      <div class="map-container full-width">
+        <div id="map-canvas" ></div>
+      </div>
+      <div class="contents row cv-item full-width">
+        <div class="contact-info small-12 small-centered">
+          
+        </div>
 
+        <div class="contact-form small-12 small-centered">
+
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer>
+  </footer>
 
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/foundation-sites/js/foundation.js"></script>
   <script type="text/javascript" src="node_modules/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js"></script>
   <script type="text/javascript" src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="dist/cv.app.js"></script>
 </body>
 <!-- http://themeelite.com/demos/flato/template-2/ -->

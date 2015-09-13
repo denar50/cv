@@ -38,6 +38,18 @@ function MainCtrl($timeout, $rootScope){
       });
     }
   }
+  function initGoogleMaps(){
+    var mapCanvas = $('#map-canvas')[0];
+    var mapOptions = {
+      center: new google.maps.LatLng(7.1140244, -73.1106442),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initGoogleMaps);
 
   function TechnicalInfo(percentage, title, description){
     this.percentage = percentage;
