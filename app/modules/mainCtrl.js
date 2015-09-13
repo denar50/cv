@@ -1,10 +1,21 @@
-angular.module('esCv').controller('MainCtrl', ['$timeout', MainCtrl]);
-function MainCtrl($timeout){
+angular.module('esCv').controller('MainCtrl', ['$timeout', '$rootScope', MainCtrl]);
+function MainCtrl($timeout, $rootScope){
   var self = this;
+  var currentHash = $('.menu-item.active a').attr('href');
   self.sliderUrls = ['assets/img/slider1.jpg', 'assets/img/slider2.jpg', 'assets/img/slider3.jpg'];
   $(document).ready(function(){
     $timeout(initDom, 0);
   });
+
+  function doOnHashChange(){
+    switch (currentHash) {
+      case '#technical':
+          $rootScope.$broadcast('resetEasyPieChartAnimation');
+        break;
+      default:
+
+    }
+  }
 
   function initDom(){
     $(document).foundation();
@@ -17,7 +28,10 @@ function MainCtrl($timeout){
           $('html, body').stop().animate({
               'scrollTop': target.offset().top - 60
           }, 900, 'swing', function () {
-              //location.hash = hash;
+              if(currentHash !== hash){
+                currentHash = hash;
+                doOnHashChange();
+              }
           });
           return false;
         });
