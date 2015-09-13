@@ -44,6 +44,14 @@ function MainCtrl($timeout, $rootScope){
     this.title = title;
     this.description = description;
   };
+
+  function ExperienceInfo(start, end, title, subtitle, description){
+    this.start = start;
+    this.end = end;
+    this.title = title;
+    this.subtitle = subtitle;
+    this.description = description;
+  }
   self.technical = [];
   self.technical.push(new TechnicalInfo(90, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
   self.technical.push(new TechnicalInfo(49, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
@@ -51,4 +59,40 @@ function MainCtrl($timeout, $rootScope){
   self.technical.push(new TechnicalInfo(79, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
   self.technical.push(new TechnicalInfo(80, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
   self.technical.push(new TechnicalInfo(90, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+
+  self.experience = [];
+  self.experience.push(new ExperienceInfo('May 10',
+  'Present',
+  'Ulzards',
+  'Senior UX Designer',
+  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+
+  self.experience.push(new ExperienceInfo('May 10',
+  'Present',
+  'Ulzards',
+  'Senior UX Designer',
+  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+
+  self.experience.push(new ExperienceInfo('May 10',
+  'Present',
+  'Ulzards',
+  'Senior UX Designer',
+  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+
+  self.experience.push(new ExperienceInfo('May 10',
+  'Present',
+  'Ulzards',
+  'Senior UX Designer',
+  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+
+  self.experience.push(new ExperienceInfo('May 10',
+  'Present',
+  'Ulzards',
+  'Senior UX Designer',
+  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+  self.experience.push(new ExperienceInfo('May 10',
+  'Present',
+  'Ulzards',
+  'Senior UX Designer',
+  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
 }

@@ -97,15 +97,11 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
         <h2>WORK EXPERIENCE</h2>
         <span>My previous associations</span>
       </div>
-      <div class="column small-12">
-        <div class="row">
-          <es-easy-pie-chart percent="90"></es-easy-pie-chart>
-          <es-easy-pie-chart percent="50"></es-easy-pie-chart>
-          <es-easy-pie-chart percent="60"></es-easy-pie-chart>
-          <es-easy-pie-chart percent="40"></es-easy-pie-chart>
-          <es-easy-pie-chart percent="80"></es-easy-pie-chart>
-          <es-easy-pie-chart percent="60"></es-easy-pie-chart>
-
+      <div class="contents column small-12 large-10 large-centered">
+        <div class="row" ng-repeat="item in mainCtrl.experience">
+          <div class="column small-12 small-centered medium-12 large-12">
+            <es-experience-card start-date="item.start" end-date="item.end" title="item.title" subtitle="item.subtitle" description="item.description"></ex-experience-card>
+          </div>
         </div>
       </div>
 
