@@ -38,4 +38,17 @@ function MainCtrl($timeout, $rootScope){
       });
     }
   }
+
+  function TechnicalInfo(percentage, title, description){
+    this.percentage = percentage;
+    this.title = title;
+    this.description = description;
+  };
+  self.technical = [];
+  self.technical.push(new TechnicalInfo(90, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+  self.technical.push(new TechnicalInfo(49, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+  self.technical.push(new TechnicalInfo(70, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+  self.technical.push(new TechnicalInfo(79, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+  self.technical.push(new TechnicalInfo(80, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+  self.technical.push(new TechnicalInfo(90, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
 }

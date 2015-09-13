@@ -3,7 +3,9 @@ function easyPieChart(){
   return {
     restrict: 'E',
     scope: {
-      percent: '@'
+      percent: '=',
+      title: '=',
+      description: '='
     },
     controller: 'EasyPieChartCtrl as ctrl',
     templateUrl: 'app/directives/easyPieChart/view.html'

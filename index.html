@@ -41,7 +41,7 @@
             <li class="menu-item active"><a href="#home">Home</a></li>
             <li class="menu-item active"><a href="#about">About</a></li>
             <li class="menu-item"><a href="#technical">Skills</a></li>
-            <li class="menu-item"><a href="#exprience">Experience</a></li>
+            <li class="menu-item"><a href="#experience">Experience</a></li>
             <li class="menu-item"><a href="#education">Education</a></li>
             <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
             <li class="menu-item"><a href="#contact">Contact</a></li>
@@ -84,6 +84,21 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
       </div>
       <div class="column small-12">
         <div class="row">
+          <es-easy-pie-chart ng-repeat="item in mainCtrl.technical" percent="item.percentage" title="item.title" description="item.description">
+          </es-easy-pie-chart>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="experience" class="cv-item row full-width">
+
+      <div class="heading column small-12 small-centered">
+        <h2>WORK EXPERIENCE</h2>
+        <span>My previous associations</span>
+      </div>
+      <div class="column small-12">
+        <div class="row">
           <es-easy-pie-chart percent="90"></es-easy-pie-chart>
           <es-easy-pie-chart percent="50"></es-easy-pie-chart>
           <es-easy-pie-chart percent="60"></es-easy-pie-chart>
@@ -92,14 +107,6 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
           <es-easy-pie-chart percent="60"></es-easy-pie-chart>
 
         </div>
-      </div>
-
-    </section>
-
-    <section id="exprience" class="cv-item row full-width">
-
-      <div style="height: 880px; width: 100%; background-color: white">
-        <h1>EXPERIENCE</h1>
       </div>
 
     </section>

@@ -13,6 +13,7 @@ angular.module('esCv').controller('EasyPieChartCtrl', ['$scope', function ($scop
         lineCap:'round',
         easing:'easeOutBounce'
     };
-    debugger;
     self.percent = $scope.percent;
+    self.description = $scope.description;
+    self.title = $scope.title;
 }]);
