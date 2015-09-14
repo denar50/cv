@@ -159,6 +159,8 @@ header {
 .max-width
 {
 	max-width: 1200px;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 main{
@@ -668,6 +670,7 @@ main{
 
 		.contact-info
 		{
+			margin-bottom: 50px;
 			.detail-container
 			{
 				.icon
@@ -698,6 +701,7 @@ main{
 				padding: 15px 20px;
 				font-family: inherit;
 				height: auto;
+				margin-bottom: 25px;
 
 				@include placeholder {
 					color: $lightGray3;
@@ -709,6 +713,14 @@ main{
 				min-height: 6rem;
 			}
 
+			button
+			{
+				float: right;
+				@include clearfix;
+				background-color: $lightRed;
+				font-weight: bold;
+			}
+
 		}
 	}
 
@@ -717,9 +729,44 @@ main{
 		height: $map-height - 8;
 	}
 
-	
+	@media screen and (min-width: $small-breakpoint)
+	{
+		.contents
+		{
+			.contact-info
+			{
+				margin-bottom: 0;
+			}
+		}
+	}
 
 } //End of Contact
 
-
+footer
+{
+	text-align: center;
+	background-color: $teal;
+	.social-media
+	{
+		padding: 40px;
+		a
+		{
+			margin: 5px;
+			span
+			{
+				&.icon
+				{
+					display: inline-block;
+					color: white;
+					width: 42px;
+					height: 42px;
+					line-height: 42px;
+					font-size: 42px;
+				}
+			}
+		}
+		
+	}
+	
+}
 

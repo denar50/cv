@@ -44,7 +44,8 @@ function MainCtrl($timeout, $rootScope){
       center: new google.maps.LatLng(7.1140244, -73.1106442),
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true
+      disableDefaultUI: true,
+      scrollwheel: false
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
   }

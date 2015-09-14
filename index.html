@@ -143,33 +143,56 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
         <div id="map-canvas"></div>
       </div>
       <div class="contents row cv-item full-width">
-        <div class="contact-info small-12 small-centered">
-          <h3>CONTACT DETAILS</h3>
-          <div class="detail-container">
-            <span class="icon fi-marker small"></span><span> Collins Street West Victoria 8007 Australia</span>
+        <div class="max-width">
+          <div class="column contact-info small-12 small-centered medium-6 medium-uncentered large-4">
+            <h3>CONTACT DETAILS</h3>
+            <div class="detail-container">
+              <span class="icon fi-marker small"></span><span> Collins Street West Victoria 8007 Australia</span>
+            </div>
+            <div class="detail-container">
+              <span class="icon fi-telephone small"></span><span>+57 123 456 789</span>
+            </div>
+            <div class="detail-container">
+              <span class="icon fi-mail small"></span><a href="mailto:support@websitename.com">support@websitename.com</a>
+            </div>
           </div>
-          <div class="detail-container">
-            <span class="icon fi-telephone small"></span><span>+57 123 456 789</span>
-          </div>
-          <div class="detail-container">
-            <span class="icon fi-mail small"></span><a href="mailto:support@websitename.com">support@websitename.com</a>
-          </div>
-        </div>
 
-        <div class="contact-form small-12 small-centered">
-          <h3>SHOOT A MESSAGE!</h3>
-          <div id="contact-form" ng-form="contactForm">
-            <input type="text" name="name" placeholder="Your name..."></input>
-            <input type="text" name="email" placeholder="Your email..."></input>
-            <textarea type="text" name="name" placeholder="Your message..."></textarea>
+          <div class="column contact-form small-12 small-centered medium-6 medium-uncentered large-8">
+            <h3>SHOOT A MESSAGE!</h3>
+            <div id="contact-form" class="row" ng-form="contactForm">
+              <div class="column small-12 medium-6">
+                <input type="text" name="name" placeholder="Your name..."></input>
+              </div>
+              <div class="column small-12 medium-6">
+                <input type="text" name="email" placeholder="Your email..."></input>
+              </div>
+              <div class="column small-12">
+                <textarea type="text" name="name" placeholder="Your message..."></textarea>
+              </div>
+              <div class="column small-12">
+                <button>Send message</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="row">
+        <div class="column small-12 small-centered">
+          <div class="max-width social-media">
+            <a href="#"><span class="icon fi-social-twitter medium"></span></a>
+            <a href="#"><span class="icon fi-social-linkedin medium"></span></a>
+            <a href="#"><span class="icon fi-social-github medium"></span></a>
+            <a href="#"><span class="icon fi-social-facebook medium"></span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer>
-  </footer>
+  
 
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/foundation-sites/js/foundation.js"></script>

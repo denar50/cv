@@ -107,3 +107,11 @@
   &::-moz-placeholder          {@content}
   &:-ms-input-placeholder      {@content}  
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
