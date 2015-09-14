@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['node_modules/foundation-sites/scss']
+        includePaths: ['node_modules/foundation-sites/scss', 'bower_components/foundation-icon-fonts']
       },
       dist: {
         options: {

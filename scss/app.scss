@@ -1,4 +1,5 @@
 @import "foundation/settings", "foundation";
+@import "_foundation-icons.scss";
 @import "mixins";
 /*---------------------------------------------------------------------------------
  1. CSS Reset
@@ -10,6 +11,7 @@ $lightRed: #FF675F;
 $lightGray3: #8e8e8e;
 $lightGray4: #f3f3f3;
 $darkPurple2: #474d5d;
+$darkPurple3: #585f73;
 
 * {
 	padding:0;
@@ -620,7 +622,7 @@ main{
 
 
 #contact {
-	$map-height: 400px;
+	$map-height: 408px;
 	background-color: $lightGray4;
 	color: $darkGray;
 
@@ -636,8 +638,9 @@ main{
 
 	.map-container
 	{
-		background: url(../assets/img/map-bro.png) repeat-x 0 0;
+		background: url(../assets/img/map-bro.png);
 		padding-top: 4px;
+		padding-bottom: 4px;
 		height: $map-height;
 		position: absolute;
 		left: 0;
@@ -650,19 +653,72 @@ main{
 	.contents
 	{
 		background-color: $darkPurple2;
-		height: 100px;
 		margin-top: $map-height;
 		
-		.contact-details
+		font-size: 0.81rem;
+		line-height: 1.5rem;
+		color: $lightGray;
+
+		h3
 		{
-			
+			color: white;
+			font-size: 1.18rem;
+			margin-bottom: 15px;
+		}
+
+		.contact-info
+		{
+			.detail-container
+			{
+				.icon
+				{
+					font-size: 1rem;
+					margin-right: 25px;
+				}
+
+				a
+				{
+					color: inherit;
+					&:hover
+					{
+						color: white;
+					}
+				}
+			}
+		}
+
+		.contact-form
+		{
+			input[type="text"],
+			textarea
+			{
+				background-color: $darkPurple3;
+				border: none;
+				color: inherit;
+				padding: 15px 20px;
+				font-family: inherit;
+				height: auto;
+
+				&::-webkit-input-placeholder,
+				&:-moz-placeholder,
+				&::-moz-placeholder,
+				&:-ms-input-placeholder
+				{  
+				   color: $lightGray;  
+				}
+
+			}
+			textarea
+			{
+				min-height: 6rem;
+			}
+
 		}
 	}
 
 	#map-canvas
 	{
-		width: 100%;
-		height: 100%;
+		height: $map-height - 8;
 	}
 
 	

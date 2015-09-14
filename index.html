@@ -140,15 +140,29 @@ nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cil
         </div>
       </div>
       <div class="map-container full-width">
-        <div id="map-canvas" ></div>
+        <div id="map-canvas"></div>
       </div>
       <div class="contents row cv-item full-width">
         <div class="contact-info small-12 small-centered">
-          
+          <h3>CONTACT DETAILS</h3>
+          <div class="detail-container">
+            <span class="icon fi-marker small"></span><span> Collins Street West Victoria 8007 Australia</span>
+          </div>
+          <div class="detail-container">
+            <span class="icon fi-telephone small"></span><span>+57 123 456 789</span>
+          </div>
+          <div class="detail-container">
+            <span class="icon fi-mail small"></span><a href="mailto:support@websitename.com">support@websitename.com</a>
+          </div>
         </div>
 
         <div class="contact-form small-12 small-centered">
-
+          <h3>SHOOT A MESSAGE!</h3>
+          <div id="contact-form" ng-form="contactForm">
+            <input type="text" name="name" placeholder="Your name..."></input>
+            <input type="text" name="email" placeholder="Your email..."></input>
+            <textarea type="text" name="name" placeholder="Your message..."></textarea>
+          </div>
         </div>
       </div>
     </section>
