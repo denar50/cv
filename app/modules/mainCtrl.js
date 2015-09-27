@@ -1,5 +1,5 @@
-angular.module('esCv').controller('MainCtrl', ['$timeout', '$rootScope', MainCtrl]);
-function MainCtrl($timeout, $rootScope){
+angular.module('esCv').controller('MainCtrl', ['$timeout', '$rootScope', '$translate', MainCtrl]);
+function MainCtrl($timeout, $rootScope, $translate){
   var self = this;
   var currentHash = $('.menu-item.active a').attr('href');
   self.sliderUrls = ['assets/img/slider1.jpg', 'assets/img/slider2.jpg', 'assets/img/slider3.jpg'];
@@ -66,12 +66,13 @@ function MainCtrl($timeout, $rootScope){
     this.description = description;
   }
   self.technical = [];
-  self.technical.push(new TechnicalInfo(90, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
-  self.technical.push(new TechnicalInfo(49, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
-  self.technical.push(new TechnicalInfo(70, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
-  self.technical.push(new TechnicalInfo(79, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
-  self.technical.push(new TechnicalInfo(80, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
-  self.technical.push(new TechnicalInfo(90, 'PHOTOSHOP', 'Donec accumsan ligula vitae mag na curabitur id'));
+  self.technical.push(new TechnicalInfo(95, 'Javascript', 'Vanilla, jQuery, AngularJS'));
+  self.technical.push(new TechnicalInfo(70, 'PHP', 'Laravel Framework'));
+  self.technical.push(new TechnicalInfo(70, 'Databases', 'MySQL, PostgreSQL, MongoDB'));
+  self.technical.push(new TechnicalInfo(95, 'Web', 'HTML5, CSS3 (SCSS)'));
+  self.technical.push(new TechnicalInfo(90, 'Version control', 'Git, Subversion'));
+  self.technical.push(new TechnicalInfo(70, 'Java', 'Enterprise Edition: JSF, EJB, JPA (Hibernate)'));
+
 
   self.experience = [];
   self.experience.push(new ExperienceInfo('May 10',
