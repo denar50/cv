@@ -75,17 +75,20 @@ function MainCtrl($timeout, $rootScope, $translate){
 
 
   self.experience = [];
-  self.experience.push(new ExperienceInfo('May 10',
-  'Present',
-  'Ulzards',
-  'Senior UX Designer',
-  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+  self.experience.push(new ExperienceInfo('Sept. 2013',
+  'Apr. 2014',
+  'Creandosoft',
+  'Java Developer',
+  'Collaborated in the coding of the business logic, user interface and data layer of applications developed
+using the Java Enterprise Edition platform and Java Server Faces (with PrimeFaces, MyFaces and
+IceFaces as extensions)'));
 
-  self.experience.push(new ExperienceInfo('May 10',
-  'Present',
-  'Ulzards',
-  'Senior UX Designer',
-  'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.'));
+  self.experience.push(new ExperienceInfo('May 2014',
+  'May 2015',
+  'Fastcloud',
+  'Web Developer',
+  'Collaborated in coding the frontend of webpages from any given design in HTML5 (HTML,CSS and Javascript).
+I gained great knowledge on Javascript. The backend of the applications was built with Java. '));
 
   self.experience.push(new ExperienceInfo('May 10',
   'Present',
