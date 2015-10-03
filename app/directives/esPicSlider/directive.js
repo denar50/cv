@@ -5,12 +5,15 @@ function esPicSlider($interval){
     controller: 'EsPicSliderCtrl as ctrl',
     templateUrl: 'app/directives/esPicSlider/view.html',
     scope: {
-      urls: "="
+      urls: "=",
+      bottomOffset: "="
     },
     link: function(scope, element, attrs, controller){
+      debugger;
+      var bottomOffset = scope.bottomOffset && Number(scope.bottomOffset) || 0;
       var liTemplate = '<li class="es-picture columns large-12"><div class="pic">&nbsp;</div></li>';
       var wrapper = element.find('.es-pic-slider-wrapper');
-      $(element).css('height', '100%');
+      setSliderHeight();
       var ulEl = $(wrapper).find('ul');
       var liEls = [];
       scope.urls.forEach(function(value, index){
@@ -43,8 +46,15 @@ function esPicSlider($interval){
         }, 9000);
 
       }
-
+      $(window).resize(function(){
+        setSliderHeight();
+      });
       onTopSlide();
+
+      function setSliderHeight()
+      {
+        $(element).css('height', ($(window).height() - bottomOffset) + 'px');
+      }
 
       scope.$on('destroy', function(){
         $interval.cancel(picChangeTimeout);

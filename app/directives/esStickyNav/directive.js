@@ -1,5 +1,5 @@
-angular.module('esCv').directive('esStickyNav', [esStickyNav]);
-function esStickyNav(){
+angular.module('esCv').directive('esStickyNav', ['$timeout', esStickyNav]);
+function esStickyNav($timeout){
 	return {
 		restrict: 'A',
 		scope: {
@@ -22,7 +22,11 @@ function esStickyNav(){
 
 			var elementHeight = element.height();
 
-			init();
+			//This ensures it will load after all other directives load
+			var cancelTimeout = $timeout(function(){
+				init();
+			});
+
 
 			function stickToTop(){
 				if(!element.hasClass(classes.stickClass))
@@ -111,6 +115,12 @@ function esStickyNav(){
 					updateNavBar();
 				});
 			}
+
+			scope.$on('$destroy', function(){
+				cancelTimeout();
+				$(document).off();
+				$(window).off();
+			});
 
 		}
 	}

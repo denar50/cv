@@ -104,6 +104,8 @@ header {
 		}
 
 		@media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint){
+			height: 62px;
+			line-height: initial;
 			.menu-item{
 				a {
 					padding: 0 1rem;
@@ -179,10 +181,10 @@ main{
 	#pic-slider
 	{
 		z-index: 1;
-		min-height: 450px;
+		//min-height: 450px;
 		@media screen and (min-width: $small-breakpoint)
 		{
-			min-height: 600px;
+			//min-height: 600px;
 		}
 	}
 
@@ -212,7 +214,7 @@ main{
 	    	padding-bottom: 20px;
 	    	border: 1px solid white;
 	    	box-sizing: border-box;
-	    	margin-top: 150px;
+	    	//margin-top: 150px;
 
 	    	h1
 	    	{
@@ -239,7 +241,7 @@ main{
 		    @media screen and (min-width: $small-breakpoint)
 		    {
 		    	padding-top: 30px;
-					margin-top: 250px;
+					//margin-top: 250px;
 		    	width: 100%;
 		    	max-width: 668px;
 		    	h1
@@ -360,7 +362,7 @@ main{
 		}
 	}
 
-	.experience-card 
+	.experience-card
 	{
 		.card-heading
 		{
@@ -380,12 +382,12 @@ main{
 
 				p
 				{
-					margin: 0;				
+					margin: 0;
 				}
 			}
-			
+
 		}
-			
+
 		.description-container
 		{
 			width: 100%;
@@ -409,7 +411,7 @@ main{
 						margin-bottom: 6px;
 					}
 				}
-				
+
 				p
 				{
 					line-height: 1.1rem;
@@ -419,9 +421,9 @@ main{
 
 				position: relative;
 				&::before{
-					@include triangle( 
-						$direction : top, 
-						$position  : top -1rem, 
+					@include triangle(
+						$direction : top,
+						$position  : top -1rem,
 						$color     : $lightGray4,
 						$size: 1rem
 					);
@@ -437,7 +439,7 @@ main{
 	@media screen and (min-width: $small-breakpoint)
 	{
 		.experience-card
-		{	
+		{
 			.card-heading,
 			.description-container
 			{
@@ -446,7 +448,7 @@ main{
 			}
 			.card-heading
 			{
-				
+
 				max-width: 140px;
 				width: 140px;
 				text-align: left;
@@ -469,13 +471,13 @@ main{
 					padding-left: 50px;
 					&::before
 					{
-						@include triangle( 
-							$direction : left, 
-							$position  : top 1rem left -2rem, 
+						@include triangle(
+							$direction : left,
+							$position  : top 1rem left -2rem,
 							$color     : $lightGray4,
 							$size: 1rem
 						);
-						
+
 					}
 				}
 			}
@@ -498,7 +500,7 @@ main{
 		}
 	}
 
-	.experience-card 
+	.experience-card
 	{
 		.card-heading
 		{
@@ -518,12 +520,12 @@ main{
 
 				p
 				{
-					margin: 0;				
+					margin: 0;
 				}
 			}
-			
+
 		}
-			
+
 		.description-container
 		{
 			width: 100%;
@@ -547,7 +549,7 @@ main{
 						margin-bottom: 6px;
 					}
 				}
-				
+
 				p
 				{
 					line-height: 1.1rem;
@@ -557,9 +559,9 @@ main{
 
 				position: relative;
 				&::before{
-					@include triangle( 
-						$direction : top, 
-						$position  : top -1rem, 
+					@include triangle(
+						$direction : top,
+						$position  : top -1rem,
 						$color     : white,
 						$size: 1rem
 					);
@@ -575,7 +577,7 @@ main{
 	@media screen and (min-width: $small-breakpoint)
 	{
 		.experience-card
-		{	
+		{
 			.card-heading,
 			.description-container
 			{
@@ -584,7 +586,7 @@ main{
 			}
 			.card-heading
 			{
-				
+
 				max-width: 140px;
 				width: 140px;
 				text-align: left;
@@ -607,13 +609,13 @@ main{
 					padding-left: 50px;
 					&::before
 					{
-						@include triangle( 
-							$direction : left, 
-							$position  : top 1rem left -2rem, 
+						@include triangle(
+							$direction : left,
+							$position  : top 1rem left -2rem,
 							$color     : white,
 							$size: 1rem
 						);
-						
+
 					}
 				}
 			}
@@ -656,7 +658,7 @@ main{
 	{
 		background-color: $darkPurple2;
 		margin-top: $map-height;
-		
+
 		font-size: 0.81rem;
 		line-height: 1.5rem;
 		color: $lightGray;
@@ -765,8 +767,7 @@ footer
 				}
 			}
 		}
-		
-	}
-	
-}
 
+	}
+
+}
