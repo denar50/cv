@@ -19,30 +19,35 @@
     "SUBTITLE" : "A small introduction about myself",
     "NAME" : "Edgar Santos",
     "OCCUPATION" : "Systems Engineer & profesional web developer.",
-    "DESCRIPTION1" : "I'm a Systems Engineer who has devoted his life to developing web applications and get the most of what the world has to offer in terms of technology. I've always been passionate about learning and overcoming difficulties by means of collaboration and hardwork.  I have been involved in projects as a fullstack developer. I have knowledge and experience with languages such as Javascipt, Java and PHP.",
-    "DESCRIPTION2" : "I believe there's always a better way of doing things so this is why there's always room for improvement in my personal and professional life.",
+    "DESCRIPTION1" : "I'm a Systems Engineer who has devoted his life to developing web applications and get the most of what the world has to offer in terms of technology. I've always been passionate about learning and overcoming difficulties by means of collaboration and hardwork. I believe there's always a better way of doing things so this is why there's always room for improvement in my personal and professional life.",
+    "DESCRIPTION2" : "I have a strong knowledge on the Javascript programming language (Good and bard parts, performance, etc.) and experience working with the AngularJS framework and the jQuery library. Able to build markup from designs with HTML and CSS3 (Sass) making good use of Javascript based tools like Karma + Jasmine for unit testing and Grunt for deployment automation, package managers such as Bower and npm to resolve dependencies, aiming always to write readable, modular and maintainable code.",
     "DOWNLOAD_RESUME" : "Download printable resume"
   },
   "SKILLS":
   {
-    "HEADING" : "TECHNICAL SKILLS",
-    "SUBTITLE" : "I can say i’m quite good at",
-    "LIST" :
-    {
-      "DATABASES" : "Databases",
-      "VERSION" : "Version control"
-    }
+    "HEADING" : "Technical skills",
+    "SUBTITLE" : "I can say I'm quite good at"
   },
-  "EXPERIENCE":
+  "EXPERIENCE" :
   {
-
-  },
-  "EDUCATION":
-  {
-
+    "HEADING" : "Work experience",
+    "SUBTITLE" : "My previous and current associations."
   },
   "CONTACT":
   {
-
+    "HEADING" : "Get in touch",
+    "SUBTITLE" : "Please feel free if you would like to have a chat.",
+    "DETAILS" : "Contact details",
+    "MESSAGE_TITLE" : "Shoot a message!",
+    "FORM" :
+    {
+      "PLACEHOLDER" :
+      {
+        "NAME" : "Your name...",
+        "EMAIL" : "Your email...",
+        "MESSAGE" : "Your message..."
+      },
+      "BUTTON" : "Send message"
+    }
   }
 }

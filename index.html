@@ -43,7 +43,7 @@
             <li class="menu-item active"><a href="#about">{{'NAV.ABOUT' | translate}}</a></li>
             <li class="menu-item"><a href="#technical">{{'NAV.SKILLS' | translate}}</a></li>
             <li class="menu-item"><a href="#experience">{{'NAV.EXPERIENCE' | translate}}</a></li>
-            <li class="menu-item"><a href="#education">{{'NAV.EDUCATION' | translate}}</a></li>
+            <!--<li class="menu-item"><a href="#education">{{'NAV.EDUCATION' | translate}}</a></li> -->
             <!-- <li class="menu-item"><a href="#portfolio">Portfolio</a></li> -->
             <li class="menu-item"><a href="#contact">{{'NAV.CONTACT' | translate}}</a></li>
           </ul>
@@ -96,8 +96,8 @@
     <section id="experience" class="cv-item row full-width">
 
       <div class="max-width heading column small-12 small-centered">
-        <h2>WORK EXPERIENCE</h2>
-        <span>My previous associations</span>
+        <h2>{{'EXPERIENCE.HEADING' | translate}}</h2>
+        <span>{{'EXPERIENCE.SUBTITLE' | translate}}</span>
       </div>
       <div class="max-width contents column small-12 large-10 large-centered">
         <div class="row" ng-repeat="item in mainCtrl.experience">
@@ -108,7 +108,7 @@
       </div>
 
     </section>
-
+    <!--
     <section id="education" class="cv-item row full-width">
 
       <div class="max-width heading column small-12 small-centered">
@@ -123,7 +123,7 @@
         </div>
       </div>
 
-    </section>
+    </section> -->
     <!--
     <section id="portfolio" class="cv-item row full-width">
 
@@ -149,13 +149,19 @@
           <div class="column contact-info small-12 small-centered medium-6 medium-uncentered large-4">
             <h3>CONTACT DETAILS</h3>
             <div class="detail-container">
-              <span class="icon fi-marker small"></span><span> Collins Street West Victoria 8007 Australia</span>
+              <a target="_blank" href="https://www.google.com.co/maps/@7.12064,-73.1215831,15z">
+                <span class="icon fi-marker small"></span><span>Bucaramanga, Colombia</span>
+              </a>
             </div>
             <div class="detail-container">
-              <span class="icon fi-telephone small"></span><span>+57 123 456 789</span>
+              <a href="tel:+573208331820">
+                <span class="icon fi-telephone small"></span><span>+57 3208331820</span>
+              </a>
             </div>
             <div class="detail-container">
-              <span class="icon fi-mail small"></span><a href="mailto:support@websitename.com">support@websitename.com</a>
+              <a href="mailto:lobotk50@gmail.com">
+                <span class="icon fi-mail small"></span><span>lobotk50@gmail.com</span>
+              </a>
             </div>
           </div>
 
@@ -184,10 +190,9 @@
       <div class="row">
         <div class="column small-12 small-centered">
           <div class="max-width social-media">
-            <a href="#"><span class="icon fi-social-twitter medium"></span></a>
-            <a href="#"><span class="icon fi-social-linkedin medium"></span></a>
-            <a href="#"><span class="icon fi-social-github medium"></span></a>
-            <a href="#"><span class="icon fi-social-facebook medium"></span></a>
+            <a target="_blank" href="https://co.linkedin.com/in/esantosdev"><span class="icon fi-social-linkedin medium"></span></a>
+            <a target="_blank" href="https://github.com/denar50"><span class="icon fi-social-github medium"></span></a>
+            <!--<a href="#"><span class="icon fi-social-facebook medium"></span></a> -->
           </div>
         </div>
       </div>
