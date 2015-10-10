@@ -627,7 +627,7 @@ main{
 
 
 #contact {
-	$map-height: 408px;
+	$map-height: 407px;
 	background-color: $lightGray4;
 	color: $darkGray;
 
@@ -644,8 +644,7 @@ main{
 	.map-container
 	{
 		background: url(../assets/img/map-bro.png);
-		padding-top: 4px;
-		padding-bottom: 4px;
+		padding-top: 3px;
 		height: $map-height;
 		position: absolute;
 		left: 0;
@@ -729,7 +728,7 @@ main{
 
 	#map-canvas
 	{
-		height: $map-height - 8;
+		height: $map-height - 7;
 	}
 
 	@media screen and (min-width: $small-breakpoint)
