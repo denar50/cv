@@ -25,20 +25,13 @@ function MainCtrl($timeout, $rootScope, $translate){
   self.technical.push(new TechnicalInfo(90, 'Version control', 'Git, Subversion'));
   self.technical.push(new TechnicalInfo(70, 'Java', 'Enterprise Edition: JSF, EJB, JPA (Hibernate)'));
 
-
   self.experience = [];
 
-  self.experience.push(new ExperienceInfo('Mar. 2013',
-  'Sept. 2013',
-  'Nippon Computer Kaihatsu',
-  'Intern student',
-  'Chosen as intern student to live and work six months in Japan in an IT company doing tasks related to web development.'));
-
-  self.experience.push(new ExperienceInfo('Sept. 2013',
-  'Apr. 2014',
-  'Creandosoft',
-  'Java Developer',
-  'Collaborated in the coding of the business logic, user interface and data layer of applications developed using the Java Enterprise Edition platform and Java Server Faces (with PrimeFaces, MyFaces and IceFaces as extensions)'));
+  self.experience.push(new ExperienceInfo('May 2015',
+  'Present',
+  'Pensemos S.A.',
+  'Frontend developer',
+  'Currently collaborating in the coding of the frontend of web applications built using AngularJS, Foundation Sites and Jasmine for unit testing. '));
 
   self.experience.push(new ExperienceInfo('May 2014',
   'May 2015',
@@ -46,10 +39,16 @@ function MainCtrl($timeout, $rootScope, $translate){
   'Web Developer',
   'Collaborated in coding the frontend of webpages from any given design in HTML5 (HTML,CSS and Javascript). Using vanilla Javascript to write all the frontend and part of the backend logic (part Javascript and part Java).'));
 
-  self.experience.push(new ExperienceInfo('May 2015',
-  'Present',
-  'Pensemos S.A.',
-  'Frontend developer',
-  'Currently collaborating in the coding of the frontend of web applications built using AngularJS, Foundation Sites and Jasmine for unit testing. '));
+  self.experience.push(new ExperienceInfo('Sept. 2013',
+  'Apr. 2014',
+  'Creandosoft',
+  'Java Developer',
+  'Collaborated in the coding of the business logic, user interface and data layer of applications developed using the Java Enterprise Edition platform and Java Server Faces (with PrimeFaces, MyFaces and IceFaces as extensions)'));
+
+  self.experience.push(new ExperienceInfo('Mar. 2013',
+  'Sept. 2013',
+  'Nippon Computer Kaihatsu',
+  'Intern student',
+  'Chosen as intern student to live and work six months in Japan in an IT company doing tasks related to web development.'));
 
 }
