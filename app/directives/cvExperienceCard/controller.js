@@ -1,5 +1,5 @@
-angular.module('esCv').controller('EsExperienceCard', ['$scope', EsExperienceCard]);
-function EsExperienceCard($scope){
+angular.module('esCv').controller('CvExperienceCard', ['$scope', CvExperienceCard]);
+function CvExperienceCard($scope){
     var self = this;
     self.title = $scope.title;
     self.startDate = $scope.startDate;

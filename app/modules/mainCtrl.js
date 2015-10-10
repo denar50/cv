@@ -7,50 +7,9 @@ function MainCtrl($timeout, $rootScope, $translate){
     $timeout(initDom, 0);
   });
 
-  function doOnHashChange(){
-    switch (currentHash) {
-      case '#technical':
-          $rootScope.$broadcast('resetEasyPieChartAnimation');
-        break;
-      default:
-
-    }
-  }
-
   function initDom(){
     $(document).foundation();
-    initNavLinks();
-    function initNavLinks(){
-      $('.menu-item a[href^="#"]').each(function(){
-        var hash = this.hash;
-        var target = $(hash);
-        $(this).on('click', function(e){
-          $('html, body').stop().animate({
-              'scrollTop': target.offset().top - 60
-          }, 900, 'swing', function () {
-              if(currentHash !== hash){
-                currentHash = hash;
-                doOnHashChange();
-              }
-          });
-          return false;
-        });
-      });
-    }
   }
-  /*function initGoogleMaps(){
-    var mapCanvas = $('#map-canvas')[0];
-    var mapOptions = {
-      center: new google.maps.LatLng(7.1140244, -73.1106442),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true,
-      scrollwheel: false
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-  }*/
-
-  //google.maps.event.addDomListener(window, 'load', initGoogleMaps);
 
   function TechnicalInfo(percentage, title, description){
     this.percentage = percentage;

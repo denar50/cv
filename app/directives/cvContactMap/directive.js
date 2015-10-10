@@ -6,7 +6,6 @@ function cvContactMap()
     templateUrl: 'app/directives/cvContactMap/view.html',
     link: function(scope, element, attrs)
     {
-      debugger;
       var mapCanvas = $(element).find('#map-canvas')[0];
       var mapOptions = {
         center: new google.maps.LatLng(7.1140244, -73.1106442),

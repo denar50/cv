@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <base href="/"></base>
 </head>
-<body ng-cloak>
+<body ng-cloak cv-foundation>
   <header>
 
     <section id="home" class="row full-width">
@@ -37,13 +37,13 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="center">
-            <li class="menu-item active"><a href="#home">{{'NAV.HOME' | translate}}</a></li>
-            <li class="menu-item active"><a href="#about">{{'NAV.ABOUT' | translate}}</a></li>
-            <li class="menu-item"><a href="#technical">{{'NAV.SKILLS' | translate}}</a></li>
-            <li class="menu-item"><a href="#experience">{{'NAV.EXPERIENCE' | translate}}</a></li>
+            <li class="menu-item active"><a cv-nav-link href="#home">{{'NAV.HOME' | translate}}</a></li>
+            <li class="menu-item active"><a cv-nav-link href="#about">{{'NAV.ABOUT' | translate}}</a></li>
+            <li class="menu-item"><a cv-nav-link href="#technical">{{'NAV.SKILLS' | translate}}</a></li>
+            <li class="menu-item"><a cv-nav-link href="#experience">{{'NAV.EXPERIENCE' | translate}}</a></li>
             <!--<li class="menu-item"><a href="#education">{{'NAV.EDUCATION' | translate}}</a></li> -->
             <!-- <li class="menu-item"><a href="#portfolio">Portfolio</a></li> -->
-            <li class="menu-item"><a href="#contact">{{'NAV.CONTACT' | translate}}</a></li>
+            <li class="menu-item"><a cv-nav-link href="#contact">{{'NAV.CONTACT' | translate}}</a></li>
           </ul>
         </section>
       </nav>
@@ -84,8 +84,8 @@
       </div>
       <div class="max-width column small-12 large-12 large-centered">
         <div class="row">
-          <es-easy-pie-chart ng-repeat="item in mainCtrl.technical" percent="item.percentage" title="item.title" description="item.description">
-          </es-easy-pie-chart>
+          <cv-easy-pie-chart ng-repeat="item in mainCtrl.technical" percent="item.percentage" title="item.title" description="item.description">
+          </cv-easy-pie-chart>
         </div>
       </div>
 
@@ -100,7 +100,7 @@
       <div class="max-width contents column small-12 large-10 large-centered">
         <div class="row" ng-repeat="item in mainCtrl.experience">
           <div class="card-wrapper column small-12 small-centered medium-12 large-12">
-            <es-experience-card start-date="item.start" end-date="item.end" title="item.title" subtitle="item.subtitle" description="item.description"></ex-experience-card>
+            <cv-experience-card start-date="item.start" end-date="item.end" title="item.title" subtitle="item.subtitle" description="item.description"></cv-experience-card>
           </div>
         </div>
       </div>

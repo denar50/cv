@@ -1,5 +1,5 @@
-angular.module('esCv').directive('esEasyPieChart', [easyPieChart]);
-function easyPieChart(){
+angular.module('esCv').directive('cvEasyPieChart', [cvEasyPieChart]);
+function cvEasyPieChart(){
   return {
     restrict: 'E',
     scope: {
@@ -8,6 +8,6 @@ function easyPieChart(){
       description: '='
     },
     controller: 'EasyPieChartCtrl as ctrl',
-    templateUrl: 'app/directives/easyPieChart/view.html'
+    templateUrl: 'app/directives/cvEasyPieChart/view.html'
   }
 }

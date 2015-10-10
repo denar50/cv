@@ -20,10 +20,6 @@ module.exports = function(grunt) {
         src: [
             'app/modules/modules.js',
             'app/modules/mainCtrl.js',
-            'app/utils/ppUtils.js',
-            'app/core/routes.js',
-            'app/core/modules.js',
-            'app/core/**/*.js',
             'app/filters/*.js',
             'app/services/*.js',
             'app/**/controller.js',
