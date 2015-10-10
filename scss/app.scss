@@ -194,11 +194,10 @@ main{
 	    position: absolute;
 	    top: 0;
 	    left: 0;
+			right: 0;
+			bottom: 0;
 	    background-color: rgba(27,31,43,.7);
-	    width: 100%;
-	    height: 100%;
 	    color: white;
-
 	    h1, h3
 	    {
 	    	color: inherit;
@@ -209,12 +208,13 @@ main{
 
 	    .banner-box
 	    {
+				position: absolute;
+				top: calc(50% - 68px);
+				left: calc(50% - 203px);
 	    	text-align: center;
-	    	padding-top: 20px;
-	    	padding-bottom: 20px;
+				padding: 20px 5px;
 	    	border: 1px solid white;
 	    	box-sizing: border-box;
-	    	//margin-top: 150px;
 
 	    	h1
 	    	{
@@ -240,13 +240,13 @@ main{
 
 		    @media screen and (min-width: $small-breakpoint)
 		    {
-		    	padding-top: 30px;
-					//margin-top: 250px;
-		    	width: 100%;
-		    	max-width: 668px;
+		    	padding: 30px 10px;
+		    	max-width: 549px;
+					top: calc(50% - 94.5px);
+					left: calc(50% - 274.5px);
 		    	h1
 		    	{
-		    		font-size: 4rem;
+		    		font-size: 3.5rem;
 		    	}
 		    	h3
 		    	{
@@ -256,9 +256,10 @@ main{
 
 		    @media screen and (min-width: $medium-breakpoint)
 		    {
-		    	max-width: 960px;
-		    	width: 80%;
-		    	margin-top: 250px;
+		    	max-width: 795px;
+					padding: 30px 20px;
+					top: calc(50% - 115px);
+					left: calc(50% - 397.5px);
 		    	h1
 		    	{
 		    		font-size: 5rem;
