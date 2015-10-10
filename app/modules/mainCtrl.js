@@ -3,13 +3,6 @@ function MainCtrl($timeout, $rootScope, $translate){
   var self = this;
   var currentHash = $('.menu-item.active a').attr('href');
   self.sliderUrls = ['assets/img/slider1.jpg', 'assets/img/slider2.jpg', 'assets/img/slider3.jpg'];
-  $(document).ready(function(){
-    $timeout(initDom, 0);
-  });
-
-  function initDom(){
-    $(document).foundation();
-  }
 
   function TechnicalInfo(percentage, title, description){
     this.percentage = percentage;
