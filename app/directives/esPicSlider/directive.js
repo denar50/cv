@@ -9,7 +9,6 @@ function esPicSlider($interval){
       bottomOffset: "="
     },
     link: function(scope, element, attrs, controller){
-      debugger;
       var bottomOffset = scope.bottomOffset && Number(scope.bottomOffset) || 0;
       var liTemplate = '<li class="es-picture columns large-12"><div class="pic">&nbsp;</div></li>';
       var wrapper = element.find('.es-pic-slider-wrapper');
