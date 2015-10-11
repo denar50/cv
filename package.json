@@ -10,7 +10,8 @@
         "angular-cookies": "^1.4.3",
         "serve-favicon" : "^2.3.0",
         "nodemailer" : "^0.x",
-        "body-parser": "^1.x"
+        "body-parser": "^1.x",
+        "angular-resource" : "^1.4.x"
     },
     "devDependencies":
     {

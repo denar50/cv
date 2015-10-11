@@ -698,6 +698,19 @@ main{
 
 		.contact-form
 		{
+			.form-field
+			{
+				margin-bottom: 30px;
+				position: relative;
+				.error
+				{
+					position: absolute;
+					bottom: -5px;
+					font-size: 1rem;
+					color: $lightRed;
+					font-weight: bold;
+				}
+			}
 			input[type="text"],
 			input[type="email"],
 			textarea
@@ -708,7 +721,6 @@ main{
 				padding: 15px 20px;
 				font-family: inherit;
 				height: auto;
-				margin-bottom: 25px;
 
 				@include placeholder {
 					color: $lightGray3;

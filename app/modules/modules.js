@@ -1,4 +1,4 @@
-angular.module('esCv', ['easypiechart', 'pascalprecht.translate', 'ngCookies']);
+angular.module('esCv', ['easypiechart', 'pascalprecht.translate', 'ngCookies', 'ngResource']);
 
 angular.module('esCv').config(['$locationProvider', '$translateProvider', '$windowProvider',
 function($locationProvider, $translateProvider, $windowProvider){
@@ -15,14 +15,14 @@ function($locationProvider, $translateProvider, $windowProvider){
   {
     var preferredLangKey = 'en';
 
-    var language = $windowProvider.$get().navigator.languages ?
+    /*var language = $windowProvider.$get().navigator.languages ?
       $windowProvider.$get().navigator.languages[0] :
       $windowProvider.$get().navigator.language;
 
       if(language.substr(0, 2) == 'es') {
 
         preferredLangKey = 'es';
-      }
+      }*/
 
       return preferredLangKey;
   });

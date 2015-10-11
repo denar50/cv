@@ -1,39 +1,42 @@
 <div id="contact-form" class="row" ng-form="contactForm">
-  <div class="column small-12 medium-6">
-    <input type="text" ng-model="ctrl.name" ng-required name="name" placeholder="Your name..." ng-min="3" ng-max="50"></input>
+  <div class="form-field column small-12 medium-6">
+    <input type="text" ng-model="ctrl.name" ng-required="true" name="name" placeholder="Your name..." ng-minlength="3" ng-maxlength="50"></input>
     <div class="error" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
         <small ng-show="contactForm.name.$error.required">
-            {{ 'VALIDATION.REQUIRED_FIELD' | translate }}
+            {{ 'CONTACT.FORM.VALIDATION.REQUIRED' | translate }}
         </small>
         <small ng-show="contactForm.name.$error.maxlength && !contactForm.name.$error.required">
-            {{ 'VALIDATION.MAX_LENGTH' | translate }}
+            {{ 'CONTACT.FORM.VALIDATION.MAX_LENGTH' | translate }} + 50
         </small>
         <small ng-show="contactForm.name.$error.minlength && !contactForm.name.$error.required">
-            {{ 'VALIDATION.MIN_LENGTH' | translate }}
+            {{ 'CONTACT.FORM.VALIDATION.MIN_LENGTH' | translate }}
         </small>
     </div>
   </div>
-  <div class="column small-12 medium-6">
-    <input type="email" name="email" ng-required ng-model="ctrl.email" placeholder="Your email..."></input>
+  <div class="form-field column small-12 medium-6">
+    <input type="email" name="email" ng-required="true" ng-model="ctrl.email" placeholder="Your email..."></input>
     <div class="error" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
-        <small ng-show="contactForm.email.$error.valid">
-            {{ 'VALIDATION.REQUIRED_FIELD' | translate }}
+        <small ng-show="contactForm.email.$error.required">
+            {{ 'CONTACT.FORM.VALIDATION.REQUIRED' | translate }}
+        </small>
+        <small ng-show="contactForm.email.$error.email">
+            {{ 'CONTACT.FORM.VALIDATION.EMAIL' | translate }}
         </small>
     </div>
   </div>
-  <div class="column small-12">
-    <textarea type="text" name="message" ng-required ng-model="ctrl.message" ng-min="3" ng-max="300" placeholder="Your message...">
+  <div class="form-field column small-12">
+    <textarea type="text" name="message" ng-required="true" ng-model="ctrl.message" ng-minlength="3" ng-maxlength="300" placeholder="Your message...">
       <span class="char-count">{{300 - ctrl.message.length}}</span>
     </textarea>
     <div class="error" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">
         <small ng-show="contactForm.message.$error.required">
-            {{ 'VALIDATION.REQUIRED_FIELD' | translate }}
+            {{ 'CONTACT.FORM.VALIDATION.REQUIRED' | translate }}
         </small>
         <small ng-show="contactForm.message.$error.maxlength && !contactForm.message.$error.required">
-            {{ 'VALIDATION.MAX_LENGTH' | translate }}
+            {{ 'CONTACT.FORM.VALIDATION.MAX_LENGTH' | translate }} + 300
         </small>
         <small ng-show="contactForm.message.$error.minlength && !contactForm.message.$error.required">
-            {{ 'VALIDATION.MIN_LENGTH' | translate }}
+            {{ 'CONTACT.FORM.VALIDATION.MIN_LENGTH' | translate }}
         </small>
     </div>
   </div>
