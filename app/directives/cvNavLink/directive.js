@@ -11,7 +11,6 @@ function cvNavLink(doOnHashChange)
         $('html, body').stop().animate({
             'scrollTop': target.offset().top - 60
         }, 900, 'swing', function (){
-          debugger;
               doOnHashChange(hash);
         });
         return false;

@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             preserveComments: false
         },
         files: {
-            'bin/pp.app.js': ['app/pp.app.js']
+            'dist/cv.app.js': ['dist/cv.app.js']
         }
       }
     },
@@ -114,6 +114,7 @@ module.exports = function(grunt) {
 
   });
   grunt.registerTask('build', ['sass', 'concat']);
+  grunt.registerTask('release', ['build', 'uglify']);
   /*grunt.registerTask('view', ['processhtml:web', 'processhtml:api']);
 
   grunt.registerTask('unify', ['sass', 'concat']);
