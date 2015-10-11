@@ -1,0 +1,44 @@
+<div id="contact-form" class="row" ng-form="contactForm">
+  <div class="column small-12 medium-6">
+    <input type="text" ng-model="ctrl.name" ng-required name="name" placeholder="Your name..." ng-min="3" ng-max="50"></input>
+    <div class="error" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
+        <small ng-show="contactForm.name.$error.required">
+            {{ 'VALIDATION.REQUIRED_FIELD' | translate }}
+        </small>
+        <small ng-show="contactForm.name.$error.maxlength && !contactForm.name.$error.required">
+            {{ 'VALIDATION.MAX_LENGTH' | translate }}
+        </small>
+        <small ng-show="contactForm.name.$error.minlength && !contactForm.name.$error.required">
+            {{ 'VALIDATION.MIN_LENGTH' | translate }}
+        </small>
+    </div>
+  </div>
+  <div class="column small-12 medium-6">
+    <input type="email" name="email" ng-required ng-model="ctrl.email" placeholder="Your email..."></input>
+    <div class="error" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
+        <small ng-show="contactForm.email.$error.valid">
+            {{ 'VALIDATION.REQUIRED_FIELD' | translate }}
+        </small>
+    </div>
+  </div>
+  <div class="column small-12">
+    <textarea type="text" name="message" ng-required ng-model="ctrl.message" ng-min="3" ng-max="300" placeholder="Your message...">
+      <span class="char-count">{{300 - ctrl.message.length}}</span>
+    </textarea>
+    <div class="error" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">
+        <small ng-show="contactForm.message.$error.required">
+            {{ 'VALIDATION.REQUIRED_FIELD' | translate }}
+        </small>
+        <small ng-show="contactForm.message.$error.maxlength && !contactForm.message.$error.required">
+            {{ 'VALIDATION.MAX_LENGTH' | translate }}
+        </small>
+        <small ng-show="contactForm.message.$error.minlength && !contactForm.message.$error.required">
+            {{ 'VALIDATION.MIN_LENGTH' | translate }}
+        </small>
+    </div>
+  </div>
+  <div class="column small-12">
+    <button ng-click="ctrl.submit(contactForm)" ng-if="!ctrl.messageIsSent">Send message</button>
+    <button disabled ng-if="ctrl.messageIsSent"> Thank you </button>
+  </div>
+</div>
