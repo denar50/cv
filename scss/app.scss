@@ -289,6 +289,10 @@ main{
 	    background: $darkGray;
 	    padding: 16px 22px;
 	    display: inline-block;
+			&:visited, &:hover, &:link, &:active
+			{
+				color: white;
+			}
 		}
 
 		.pic-container{
