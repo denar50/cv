@@ -41,7 +41,8 @@
     </div>
   </div>
   <div class="column small-12">
-    <button ng-click="ctrl.submit(contactForm)" ng-if="!ctrl.messageIsSent">Send message</button>
-    <button disabled ng-if="ctrl.messageIsSent"> Thank you </button>
+    <button ng-click="ctrl.submit(contactForm)" ng-disabled="ctrl.messageSending || ctrl.messageIsSent">
+      {{ctrl.currentButtonLabel}}
+    </button>
   </div>
 </div>
