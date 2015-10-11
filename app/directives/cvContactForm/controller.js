@@ -23,7 +23,7 @@ function CvContactForm(submitEmail, $timeout)
     self.messageIsSent = false;
     if(form)
     {
-      form.$setPristine()
+      form.$setPristine();
     }
   }
 
