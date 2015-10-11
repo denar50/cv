@@ -13,7 +13,7 @@ function CvContactForm(submitEmail, $timeout)
     resetForm();
   }
 
-  function resetForm()
+  function resetForm(form)
   {
     self.name='';
     self.email='';
@@ -21,6 +21,10 @@ function CvContactForm(submitEmail, $timeout)
     self.currentButtonLabel = iddle;
     self.messageSending = false;
     self.messageIsSent = false;
+    if(form)
+    {
+      form.$setPristine()
+    }
   }
 
   function submit(form)
@@ -30,14 +34,13 @@ function CvContactForm(submitEmail, $timeout)
       self.messageSending = true;
       self.currentButtonLabel = sending;
       submitEmail(self.name, self.email, self.message).then(function(d){
-        resetForm();
+        resetForm(form);
         self.messageSending = false;
         self.messageIsSent = true;
         self.currentButtonLabel = sent;
         $timeout(function(){
           self.messageIsSent = false;
           self.currentButtonLabel = iddle;
-          resetForm();
         }, 2000);
       }).catch(function(d){
         self.messageSending = false;

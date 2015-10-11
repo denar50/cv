@@ -713,7 +713,10 @@ main{
 			}
 			input[type="text"],
 			input[type="email"],
-			textarea
+			textarea,
+			input:-webkit-autofill,
+			textarea:-webkit-autofill,
+			select:-webkit-autofill
 			{
 				background-color: $darkPurple3;
 				border: none;
@@ -727,6 +730,7 @@ main{
 				}
 
 			}
+
 			textarea
 			{
 				min-height: 6rem;
