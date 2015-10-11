@@ -32,7 +32,8 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         options: {
-            preserveComments: false
+            preserveComments: false,
+            compress: true
         },
         files: {
             'dist/cv.app.js': ['dist/cv.app.js']
