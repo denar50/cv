@@ -210,7 +210,7 @@ main{
 	    {
 				position: absolute;
 				top: calc(50% - 68px);
-				left: calc(50% - 203px);
+				width: 90%;
 	    	text-align: center;
 				padding: 20px 5px;
 	    	border: 1px solid white;
@@ -246,7 +246,7 @@ main{
 					left: calc(50% - 274.5px);
 		    	h1
 		    	{
-		    		font-size: 3.5rem;
+		    		font-size: 3rem;
 		    	}
 		    	h3
 		    	{
@@ -297,10 +297,19 @@ main{
 
 		.pic-container{
 			text-align: center;
+			margin-top: 30px;
 			img {
 				width: 300px;
 				border-radius: 50%;
 				display: inline-block;
+			}
+		}
+
+		@media screen and (min-width: $small-breakpoint)
+		{
+			.pic-container
+			{
+				margin-top: 0;
 			}
 		}
 	}
