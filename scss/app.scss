@@ -181,10 +181,10 @@ main{
 	#pic-slider
 	{
 		z-index: 1;
-		//min-height: 450px;
+		min-height: 450px;
 		@media screen and (min-width: $small-breakpoint)
 		{
-			//min-height: 600px;
+			min-height: 600px;
 		}
 	}
 
