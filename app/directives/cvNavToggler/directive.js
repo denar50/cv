@@ -9,7 +9,7 @@ function cvNavToggler()
         var offsetTop = $(element).offset().top;
         if(!$('#nav-bar').hasClass('expanded') && offsetTop > 0)
         {
-          $('html, body').stop().animate({
+          $('html body').stop().animate({
               'scrollTop': offsetTop
           }, 500, 'swing');
         }

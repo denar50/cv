@@ -8,7 +8,9 @@ function cvNavLink(doOnHashChange)
       var hash = $(element).attr("href");
       var target = $(hash);
       $(element).on('click', function(e){
-        $('html, body').stop().animate({
+        e.preventDefault();
+        e.stopPropagation();
+        $('html body').stop().animate({
             'scrollTop': target.offset().top - 60
         }, 900, 'swing', function (){
           debugger;
