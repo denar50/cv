@@ -45,9 +45,9 @@ function esPicSlider($interval){
         }, 9000);
 
       }
-      $(window).resize(function(){
+      /*$(window).resize(function(){
         setSliderHeight();
-      });
+      });*/
       onTopSlide();
 
       function setSliderHeight()
