@@ -4,7 +4,9 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="node_modules/foundation-sites/css/foundation.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/"></base>
+  <title>Edgar Santos</title>
 </head>
 <body ng-cloak cv-foundation>
   <header>
@@ -67,7 +69,7 @@
           <h4>{{'ABOUT.OCCUPATION' | translate}}</h4>
           <p class="text-justify">{{'ABOUT.DESCRIPTION1' | translate}}</p>
           <p class="text-justify">{{'ABOUT.DESCRIPTION2' | translate}}</p>
-          <button href="#" class="bntDownload">{{'ABOUT.DOWNLOAD_RESUME' | translate}}</button>
+          <a href="assets/esantoscv.pdf" download class="bntDownload">{{'ABOUT.DOWNLOAD_RESUME' | translate}}</a>
         </div>
         <div class="column small-12 medium-11 pic-container large-4">
           <img src="assets/img/me.jpg" alt="My image" />
@@ -165,20 +167,7 @@
 
           <div class="column contact-form small-12 small-centered medium-6 medium-uncentered large-8">
             <h3>SHOOT A MESSAGE!</h3>
-            <div id="contact-form" class="row" ng-form="contactForm">
-              <div class="column small-12 medium-6">
-                <input type="text" name="name" placeholder="Your name..."></input>
-              </div>
-              <div class="column small-12 medium-6">
-                <input type="text" name="email" placeholder="Your email..."></input>
-              </div>
-              <div class="column small-12">
-                <textarea type="text" name="name" placeholder="Your message..."></textarea>
-              </div>
-              <div class="column small-12">
-                <button>Send message</button>
-              </div>
-            </div>
+            <cv-contact-form></cv-contact-form>
           </div>
         </div>
       </div>
@@ -188,7 +177,7 @@
       <div class="row">
         <div class="column small-12 small-centered">
           <div class="max-width social-media">
-            <a target="_blank" href="https://co.linkedin.com/in/esantosdev"><span class="icon fi-social-linkedin medium"></span></a>
+            <a target="_blank" href="https://www.linkedin.com/in/esantosdev"><span class="icon fi-social-linkedin medium"></span></a>
             <a target="_blank" href="https://github.com/denar50"><span class="icon fi-social-github medium"></span></a>
             <!--<a href="#"><span class="icon fi-social-facebook medium"></span></a> -->
           </div>
@@ -202,10 +191,13 @@
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/foundation-sites/js/foundation.min.js"></script>
   <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+
   <script type="text/javascript" src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js"></script>
   <script type="text/javascript" src="bower_components/jquery.easing/js/jquery.easing.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+
 
   <!--TRANSLATE-->
   <script type="text/javascript"

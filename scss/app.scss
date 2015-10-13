@@ -210,7 +210,7 @@ main{
 	    {
 				position: absolute;
 				top: calc(50% - 68px);
-				left: calc(50% - 203px);
+				width: 90%;
 	    	text-align: center;
 				padding: 20px 5px;
 	    	border: 1px solid white;
@@ -246,7 +246,7 @@ main{
 					left: calc(50% - 274.5px);
 		    	h1
 		    	{
-		    		font-size: 3.5rem;
+		    		font-size: 3rem;
 		    	}
 		    	h3
 		    	{
@@ -289,14 +289,27 @@ main{
 	    background: $darkGray;
 	    padding: 16px 22px;
 	    display: inline-block;
+			&:visited, &:hover, &:link, &:active
+			{
+				color: white;
+			}
 		}
 
 		.pic-container{
 			text-align: center;
+			margin-top: 30px;
 			img {
 				width: 300px;
 				border-radius: 50%;
 				display: inline-block;
+			}
+		}
+
+		@media screen and (min-width: $small-breakpoint)
+		{
+			.pic-container
+			{
+				margin-top: 0;
 			}
 		}
 	}
@@ -694,8 +707,25 @@ main{
 
 		.contact-form
 		{
+			.form-field
+			{
+				margin-bottom: 30px;
+				position: relative;
+				.error
+				{
+					position: absolute;
+					bottom: -5px;
+					font-size: 1rem;
+					color: $lightRed;
+					font-weight: bold;
+				}
+			}
 			input[type="text"],
-			textarea
+			input[type="email"],
+			textarea,
+			input-webkit-autofill,
+			textarea-webkit-autofill,
+			select-webkit-autofill
 			{
 				background-color: $darkPurple3;
 				border: none;
@@ -703,13 +733,18 @@ main{
 				padding: 15px 20px;
 				font-family: inherit;
 				height: auto;
-				margin-bottom: 25px;
+
+				&:-webkit-autofill
+				{
+					background-color: $darkPurple3 !important;
+				}
 
 				@include placeholder {
 					color: $lightGray3;
 				}
 
 			}
+
 			textarea
 			{
 				min-height: 6rem;

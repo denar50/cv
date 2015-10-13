@@ -47,6 +47,13 @@
         "EMAIL" : "Your email...",
         "MESSAGE" : "Your message..."
       },
+      "VALIDATION":
+      {
+        "REQUIRED" : "This field is required",
+        "EMAIL" : "Please enter a valid email",
+        "MIN_LENGTH" : "This field must contain at least 3 characters",
+        "MAX_LENGTH" : "This field has too many characters. Max. number: "
+      },
       "BUTTON" : "Send message"
     }
   }
